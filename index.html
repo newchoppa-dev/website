@@ -3,34 +3,49 @@
   <meta charset="UTF-8">
   <title>Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header>
    <div class="container layout">
     <img class="borderline" src="images/1.png" alt="Портфоліо Шмакова Даніїла">
-    <h1 class="title">Головна сторінка портфоліо</h1>
-    <h1 class="title">тест2</h1>
+    <h1 class="title" data-i18n="main_title">Головна сторінка портфоліо</h1>
     <img src="images/title.gif">
-    <p class="title"><strong> Портфоліо студента ФБМІ, групи ЗК-41, Шмакова Даніїла Олеговича </strong></p>
+    <p class="title" data-i18n="portfolio_title"><strong> Портфоліо студента ФБМІ, групи ЗК-41, Шмакова Даніїла Олеговича </strong></p>
    </div>
   </header>
 
+<div id="assistant" class="assistant hidden">
+    <img src="images/Clippy_guy.png" alt="Асистент">
+    <p id="assistant-text" class="text_style"></p>
+</div>
+
+<div class="container layout">
+	<section class="boxes">
+	   <button id="helper" class="buttonstyle" type="button" data-i18n="help">Допомогти</button>
+	   <button id="langUK" class="buttonstyle" type="button" data-lang="uk">UA</button>
+	   <button id="langEN" class="buttonstyle" type="button" data-lang="eng">EN</button>
+	</section>
+</div>
+
+
 <div class="container layout">
   <section class="boxes">
-     <h2>Головна навігація</h2>
+     <h2 data-i18n="main_navigation">Головна навігація</h2>
      <ol>
-       <li>Номер телефону.</li>
-       <li>Електронна пошта.</li>
-       <li>Тег у телеграмі.</li>
+       <li data-i18n="phone_number">Номер телефону.</li>
+       <li data-i18n="gmail">Електронна пошта.</li>
+       <li data-i18n="telegram_tag">Тег у телеграмі.</li>
      </ol>
   </section>
 </div>
 
+
 <div class="container layout">
   <nav aria-label="Головна навігація">
      <ul>
-       <li class="linkstyle"><a href="index.html" aria-current="page">Головна</a></li>
-       <li class="linkstyle"><a href="contacts.html">Контакти</a></li>
+       <li class="linkstyle"><a rel="noopener" href="index.html" aria-current="page" data-i18n="main_link">Головна</a></li>
+       <li class="linkstyle"><a rel="noopener" href="contacts.html" data-i18n="contacts_link">Контакти</a></li>
      </ul>
   </nav>
 </div>
@@ -38,65 +53,80 @@
   <main>
    <div class="container layout">
     <section id="index">
-      <h2 class="title">Інтереси</h2>
+      <h2 class="title" data-i18n="hobbies_title">Інтереси</h2>
        <article>
-         <h3 class="boxes">Мої інтереси, хобі.</h3>
+         <h3 class="boxes" data-i18n="hobbies_desc">Мої інтереси та хобі.</h3>
        </article>
        <section class="boxes">
            <ol>
-             <li>Хобі.</li>
-             <li>Що більше всього цікавить.</li>
+             <li data-i18n="hobbies">Хобі.</li>
+             <li data-i18n="love_to_do">Що більше всього цікавить.</li>
            </ol>
        </section>
        <article>
           <nav aria-label="Інтереси">
            <ul>
-             <li class="linkstyle"><a href="hobby.html">Інтереси</a></li>
+             <li class="linkstyle"><a rel="noopener" href="hobby.html" data-i18n="hobbies_link">Інтереси</a></li>
            </ul>
        </nav>
       </article>
     </section>
     <section id="skills">
-     <h2 class="title">Навички</h2>
+     <h2 class="title" data-i18n="skills_title">Навички</h2>
        <article>
-         <h3 class="boxes">Посилання на сторінку із описом моїх навочок</h3>
+         <h3 class="boxes" data-i18n="skills_desc">Посилання на сторінку із описом моїх навочок</h3>
        </article>
       <section class="boxes">
           <ol>
-            <li>Розробка html сторінок.</li>
-            <li>Програмування на Python.</li>
+            <li data-i18n="html_develop">Розробка html сторінок.</li>
+            <li data-i18n="python_develop">Програмування на Python.</li>
           </ol>
       </section>
       <article>
         <nav aria-label="Посилання на сторінки із описом моїх навочок">
           <ul>
-            <li class="linkstyle"><a href="skills.html">Навички</a></li>
+            <li class="linkstyle"><a rel="noopener" href="skills.html" data-i18n="skills_link">Навички</a></li>
           </ul>
         </nav>
        </article>
     </section>
     <section id="about">
-     <h2 class="title">Про мене</h2>
+     <h2 class="title" data-i18n="about_title">Про мене</h2>
       <article>
-        <h3 class="boxes">Посилання на сторінку про мене</h3>
+        <h3 class="boxes" data-i18n="about_desc">Посилання на сторінку про мене</h3>
       </article>
       <section class="boxes">
           <ol>
-            <li>Навчаюсь в КПІ.</li>
-            <li>Дуже креативний.</li>
+            <li data-i18n="university">Навчаюсь в КПІ.</li>
+            <li data-i18n="creativity">Дуже креативний.</li>
           </ol>
       </section>
       <article>
         <nav aria-label="Посилання на сторінку про мене">
           <ul>
-            <li class="linkstyle"><a href="about.html">Про мене</a></li>
+            <li class="linkstyle"><a rel="noopener" href="about.html" data-i18n="about_link">Про мене</a></li>
           </ul>
         </nav>
       </article>
    </section>
   </div>
  </main>
-
+ 
+<div class="container layout">
+  <section id="projects">
+   <h2 class="title" data-i18n="achievements_title">Досягнення</h2>
+   <div class="title" id="achievementTagList"></div>
+   <div class="boxes" id="achievementsGrid"></div>
+   
+   <div id="achievementModal" class="modal">
+     <div class="modal_content">
+	   <h3 id="achModalTitle"></h3>
+	   <p id="achModalDesc"></p>
+	   <button id="achModalClose" class="buttonstyle" data-i18n="close_button">Закрити</button>
+	 </div>
+   </div>
+  </section>
+</div>
 
 <footer>
   <p>&copy;Daniil_Shmakov2026.</p>
